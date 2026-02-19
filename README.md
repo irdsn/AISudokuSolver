@@ -7,15 +7,6 @@
 
 A pipeline to solve Sudoku puzzles from images, using computer vision for digit extraction, a backtracking algorithm for solving, and LLMs for analytical summaries.  
 
----
-
-## Author
-
-Íñigo Rodríguez Sánchez  
-AI & Data Engineer
-
----
-
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -30,8 +21,6 @@ AI & Data Engineer
 - [Important Notes](#important-notes)
 - [Final Words](#final-words)
 
----
-
 ## Introduction
 
 AISudokuSolver is a fully autonomous pipeline that solves Sudoku puzzles from images, integrating computer vision, deep learning, and symbolic reasoning.
@@ -41,8 +30,6 @@ The system extracts and interprets the puzzle board from a photo or scan using a
 In addition to solving the puzzle, AISudokuSolver records a detailed trace of the resolution process and generates a structured Markdown report enriched with a natural language summary powered by a Large Language Model (LLM). This summary interprets the solving strategy, highlights key decisions, and estimates puzzle complexity.
 
 The project is designed as a robust, testable, and educational framework that combines traditional algorithmic techniques with modern AI capabilities. It is ideal for exploring computer vision pipelines, algorithm design, and LLM-based analytics in a real-world use case.
-
----
 
 ## Key Features
 
@@ -54,8 +41,6 @@ The project is designed as a robust, testable, and educational framework that co
 - **Markdown Reporting**: Produces structured reports with boards, trace, metrics, and LLM insights.
 - **Modular and Maintainable Architecture**: Decoupled components for vision, logic, and reporting, each independently testable.
 - **FastAPI Server Support**: Exposes the solver as a local REST API for integration into other systems or workflows.
-
----
 
 ## Project Structure
 
@@ -127,8 +112,6 @@ ai-sudoku-solver/
 └── requirements.txt               # Python package dependencies
 ```
 
----
-
 ## Script Overview
 
 | Script / Module                        | Description                                                                 |
@@ -148,8 +131,6 @@ ai-sudoku-solver/
 | **vision/board_segmenter.py**          | Detects and isolates the Sudoku grid from an image                          |
 | **vision/image_parser.py**             | Full image-to-matrix pipeline: segmentation + digit classification          |
 | **app.py**                             | FastAPI server exposing the solving pipeline as a REST API                  |
-
----
 
 ## Tests & Coverage
 
@@ -213,8 +194,6 @@ Coverage HTML written to dir htmlcov
 
 These tests give confidence that core modules behave reliably across a wide range of inputs, edge cases, and real-world conditions. The test suite ensures that future improvements or refactors won't compromise existing functionality.
 
----
-
 ## System Workflow
 
 The following diagram illustrates the overall data flow within the Sudoku solving pipeline, from image input to final report generation:
@@ -265,8 +244,6 @@ The following diagram illustrates the overall data flow within the Sudoku solvin
 ```
 
 The system is modular by design. Each stage is handled by a dedicated component, enabling both flexibility and testability across the pipeline.
-
----
 
 ## Computer Vision & Digit Recognition
 
@@ -365,8 +342,6 @@ The classifier demonstrates excellent generalization across cleanly segmented Su
 
 The model is stored in `cnn_classifier/model/digit_model.keras` and used at runtime to classify new cell images.
 
----
-
 ## Installation
 
 1. Clone this repository:
@@ -390,8 +365,6 @@ pip install -r requirements.txt
 ```bash
 OPENAI_API_KEY=your_openai_api_key_here
 ```
-
----
 
 ## Usage
 
@@ -449,8 +422,6 @@ A successful response will look like:
 
 The complete output files will be saved in your Downloads/AISudokuSolver/ folder.
 
----
-
 ## Important Notes
 
 - The CNN model for digit recognition was trained from scratch using manually labeled Sudoku cell images. You can retrain or improve this model by updating the dataset in `/datasets/train`, `/datasets/val`, and `/datasets/test`.
@@ -468,9 +439,7 @@ The complete output files will be saved in your Downloads/AISudokuSolver/ folder
 
 > This modular pipeline enables easy retraining, debugging, and extension of both the vision and logic components.
 
----
-
-## Final Words
+## Contributing & Contact
 
 This project originated from my personal passion for Sudoku puzzles and the challenge of building a system capable of solving them end-to-end — from visual recognition to logical resolution.
 
@@ -478,6 +447,9 @@ It has been designed as a fully autonomous pipeline that blends classic algorith
 
 Feel free to explore, extend, or integrate it into your own applications. Contributions, feedback, or improvements are always welcome.
 
-
 **If you’ve found this project useful or inspiring — feel free to build on it, break it, or just drop a star 🌟.**
 
+- Bugs / feature requests: please open an **Issue**.
+- Direct contact: [inigo.rodsan@gmail.com](mailto:inigo.rodsan@gmail.com)
+
+Developed & maintained by [Íñigo Rodríguez](https://github.com/irdsn).
