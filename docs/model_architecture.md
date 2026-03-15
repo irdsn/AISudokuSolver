@@ -7,7 +7,7 @@ This system uses computer vision techniques to extract the Sudoku grid from a ph
 Each input image is processed to detect the outer contour of the Sudoku grid, which is then warped into a perfect square. This grid is divided into 81 individual square cells.
 
 <div align="center">
-  <img src="readme_images/sudoku.jpg" alt="Sudoku Input Example" width="350"/>
+  <img src="docs/images/sudoku.jpg" alt="Sudoku Input Example" width="350"/>
 </div>
 
 ## Cell Extraction and Labeling
@@ -15,8 +15,8 @@ Each input image is processed to detect the outer contour of the Sudoku grid, wh
 The extracted cells are saved as individual grayscale images (50x50 pixels), ready to be labeled manually into categories: digits 1–9 or empty. These labeled images are later organized into folders for training.
 
 <div align="center">
-  <img src="readme_images/5_cell.png" alt="Digit 5 Example" width="125"/>
-  <img src="readme_images/empty_cell.png" alt="Empty Cell Example" width="125"/>
+  <img src="docs/images/5_cell.png" alt="Digit 5 Example" width="125"/>
+  <img src="docs/images/empty_cell.png" alt="Empty Cell Example" width="125"/>
 </div>
 
 ## Dataset Structure
@@ -80,13 +80,13 @@ The classifier demonstrates near-perfect performance across all partitions, maki
 ## Training Visualizations
 
 <div align="center">
-  <img src="readme_images/training_plot.png" alt="Training Accuracy Curve" width="480"/>
+  <img src="docs/images/training_plot.png" alt="Training Accuracy Curve" width="480"/>
 </div>
 
 ## Confusion Matrix
 
 <div align="center">
-  <img src="readme_images/confusion_matrix.png" alt="Confusion Matrix" width="480"/>
+  <img src="docs/images/confusion_matrix.png" alt="Confusion Matrix" width="480"/>
 </div>
 
 The confusion matrix confirms that the classifier correctly predicted every single instance in the test set without error.

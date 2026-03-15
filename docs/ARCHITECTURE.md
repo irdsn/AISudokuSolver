@@ -21,6 +21,17 @@ ai-sudoku-solver/
 │   ├── val/                       # Validation images
 │   └── test/                      # Test images
 │
+├── docs/                          # Extended technical documentation
+│   ├── images/                    # Images used in project documentation
+│   │   ├── 5_cell.png             # Example of a segmented cell containing digit 5
+│   │   ├── AISudokuSolver_logo.png # Project logo used in documentation
+│   │   ├── confusion_matrix.png   # CNN evaluation confusion matrix
+│   │   ├── empty_cell.png         # Example of an empty segmented cell
+│   │   ├── sudoku.jpg             # Sample Sudoku input image
+│   │   └── training_plot.png      # CNN training accuracy/loss visualization
+│   ├── ARCHITECTURE.md            # System architecture, module structure, and workflow
+│   └── model_architecture.md      # Computer vision pipeline, dataset, CNN model, and metrics
+│
 ├── inputs/                        # Sample Sudoku images (e.g., easy.jpg, medium.jpg)
 │   └── easy.jpg, medium.jpg, etc.
 │
